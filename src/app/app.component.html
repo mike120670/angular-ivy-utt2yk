@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 mt-4">
-      <h1 class="text-center">People</h1>
+      <h1 class="text-left">People</h1>
+      <hr />
       <button class="btn btn-success" (click)="showAddUserForm()">
         Click to Add User
       </button>
@@ -9,7 +10,7 @@
         <form *ngIf="userForm">
           <div class="container">
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-5">
                 <p>
                   First Name:
                   <input
@@ -19,7 +20,7 @@
                   />
                 </p>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-5">
                 <p>
                   Last Name:
                   <input
@@ -29,7 +30,7 @@
                   />
                 </p>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-2" style="padding-top: 20px;">
                 <button
                   type="button"
                   class="btn btn-primary mr-2"
