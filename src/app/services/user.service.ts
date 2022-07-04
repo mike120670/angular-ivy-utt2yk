@@ -2,24 +2,23 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   private upersons: User[] = [
     {
       id: 1,
       firstName: 'Ricky',
-      lastName: 'Bobby'
+      lastName: 'Bobby',
     },
     {
       id: 2,
       firstName: 'John',
-      lastName: 'Doe'
-    }
+      lastName: 'Doe',
+    },
   ];
 
-  constructor() { }
+  constructor() {}
 
   getUsersData(): User[] {
     return this.upersons;
@@ -28,14 +27,9 @@ export class UserService {
   addUserData(user: User) {
     user.id = this.upersons.length + 1;
     this.upersons.push(user);
+  }
 
-  }
-  updateUserData(user: User) {
-    const index = this.upersons.findIndex(u => user.id === u.id);
-    this.upersons[index] = user;
-  }
   deleteUserData(user: User) {
     this.upersons.splice(this.upersons.indexOf(user), 1);
   }
-
 }
