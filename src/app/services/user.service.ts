@@ -21,20 +21,20 @@ export class UserService {
 
   constructor() { }
 
-  getUsersFromData(): User[] {
+  getUsersData(): User[] {
     return this.upersons;
   }
 
-  addUser(user: User) {
+  addUserData(user: User) {
     user.id = this.upersons.length + 1;
     this.upersons.push(user);
 
   }
-  updateUser(user: User) {
+  updateUserData(user: User) {
     const index = this.upersons.findIndex(u => user.id === u.id);
     this.upersons[index] = user;
   }
-  deleteUser(user: User) {
+  deleteUserData(user: User) {
     this.upersons.splice(this.upersons.indexOf(user), 1);
   }
 
