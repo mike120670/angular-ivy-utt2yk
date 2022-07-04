@@ -3,7 +3,7 @@
     <div class="col-md-12 mt-4">
       <h1 class="text-left">People</h1>
       <hr />
-      <button class="btn btn-success" (click)="showAddUserForm()">
+      <button class="btn btn-success" (click)="AddUserDataForm()">
         Click to Add User
       </button>
       <div class="mt-4">
@@ -34,7 +34,7 @@
                 <button
                   type="button"
                   class="btn btn-primary mr-2"
-                  (click)="saveUser(newUser)"
+                  (click)="saveUserData(newUser)"
                 >
                   Add
                 </button>
@@ -63,7 +63,7 @@
               <button
                 type="button"
                 class="btn btn-danger btn-sm"
-                (click)="removeUser(user)"
+                (click)="removeUserData(user)"
               >
                 Delete
               </button>

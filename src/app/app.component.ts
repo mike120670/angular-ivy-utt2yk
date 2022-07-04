@@ -24,19 +24,10 @@ export class AppComponent implements OnInit {
   }
 
   getUsers(): User[] {
-    return this.userService.getUsersFromData();
+    return this.userService.getUsersData();
   }
 
-  showEditUserForm(user: User) {
-    if (!user) {
-      this.userForm = false;
-      return;
-    }
-    this.editUserForm = true;
-    this.editedUser = user;
-  }
-
-  showAddUserForm() {
+  AddUserDataForm() {
     // resets form if edited user
     if (this.users.length) {
       this.newUser = {};
@@ -46,17 +37,17 @@ export class AppComponent implements OnInit {
 
   }
 
-  saveUser(user: User) {
+  saveUserData(user: User) {
     if (this.isNewUser) {
       // add a new user
-      this.userService.addUser(user);
+      this.userService.addUserData(user);
     }
     this.userForm = false;
   }
 
 
-  removeUser(user: User) {
-    this.userService.deleteUser(user);
+  removeUserData(user: User) {
+    this.userService.deleteUserData(user);
   }
 
 
